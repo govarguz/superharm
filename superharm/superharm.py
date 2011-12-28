@@ -1,13 +1,13 @@
 #!/usr/bin/python
 
-#We thank you in advance for sending your feedback and/or 
+#We thank you in advance for sending your feedback and/or
 #suggestions to:
 #             horacio.v.g@gmail.com
 #
 #@@@@@@@@@@@@@@@@@@@@@2011@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 #
 #What we observe is not nature itself, but nature exposed to
-#our method of questioning. 
+#our method of questioning.
 #                                  W. Heisenberg
 ############################################################
 #===========================================================
@@ -51,14 +51,14 @@ class dforce:
 
 # Define modules that will be part of the Dast class
 
-# + Module init initializes the 	
+# + Module init initializes the
     def __init__(self):    # defines the module with the input parameter self
-        self.glade_ui = gtk.glade.XML(os.path.join(ROOT, 'superharm3c.glade'))    # defines the var self.glade_ui as the same in the est module gtk.glade
+        self.glade_ui = gtk.glade.XML(os.path.join(ROOT, 'superharm.glade'))    # defines the var self.glade_ui as the same in the est module gtk.glade
         self.glade_ui.signal_autoconnect(self)    # defines the var self.glade_ui as the same in the est module gtk.glade class
-        self.window1 = self.glade_ui.get_widget('window1')    # defines the var self.glade_ui as the same in the est module gtk.glade class	
+        self.window1 = self.glade_ui.get_widget('window1')    # defines the var self.glade_ui as the same in the est module gtk.glade class
         self.window1.show()
-        
-#Buttons 	        
+
+#Buttons
     def gtk_main_quit(self, widget):
 	gtk.main_quit()
     def on_run_ex_clicked(self, widget):
@@ -67,25 +67,25 @@ class dforce:
 	omegaa = self.glade_ui.get_widget("fd1_sp").get_value()
 	q=mypypm7.mypmmoda.q = self.glade_ui.get_widget("q1_sp").get_value()
 	kc=mypypm7.mypmmoda.kc = self.glade_ui.get_widget("kc1_sp").get_value()
-	a0a = self.glade_ui.get_widget("a01_sp").get_value()	 	
+	a0a = self.glade_ui.get_widget("a01_sp").get_value()
 	a0 = mypypm7.mypmmoda.a0 = a0a*1e-9
-	emuestraa = self.glade_ui.get_widget("saym_sp").get_value()	
+	emuestraa = self.glade_ui.get_widget("saym_sp").get_value()
 	emuestra=mypypm7.mypmmoda.emuestra=emuestraa*1000000.	# in Mpa now
-	epuntaa = self.glade_ui.get_widget("ymt_sp").get_value()	
+	epuntaa = self.glade_ui.get_widget("ymt_sp").get_value()
 	epunta=mypypm7.mypmmoda.epunta=epuntaa*1000000000.	# in Gpa now
 	rada = self.glade_ui.get_widget("tr_sp").get_value()
 	rad = mypypm7.mypmmoda.rad = rada*1e-9
-	a00a = self.glade_ui.get_widget("a00_sp").get_value()	
+	a00a = self.glade_ui.get_widget("a00_sp").get_value()
 	a00 = mypypm7.mypmmoda.a00 = a00a*1e-9
 	hama = self.glade_ui.get_widget("ham_sp").get_value()
-	ham = mypypm7.mypmmoda.ham = hama*1.60217646e-19	
-	eta = mypypm7.mypmmoda.eta = self.glade_ui.get_widget("mvis_sp").get_value()	
-	epsilon1 = mypypm7.mypmmoda.epsilon1 = self.glade_ui.get_widget("lrd_sp").get_value()	
-	epsilon2 = mypypm7.mypmmoda.epsilon2 = self.glade_ui.get_widget("cdis_sp").get_value()	
+	ham = mypypm7.mypmmoda.ham = hama*1.60217646e-19
+	eta = mypypm7.mypmmoda.eta = self.glade_ui.get_widget("mvis_sp").get_value()
+	epsilon1 = mypypm7.mypmmoda.epsilon1 = self.glade_ui.get_widget("lrd_sp").get_value()
+	epsilon2 = mypypm7.mypmmoda.epsilon2 = self.glade_ui.get_widget("cdis_sp").get_value()
 	delta = mypypm7.mypmmoda.delta = 0.0
-	ljmina = self.glade_ui.get_widget("ljdep_sp").get_value()		
+	ljmina = self.glade_ui.get_widget("ljdep_sp").get_value()
 	ljmin = mypypm7.mypmmoda.ljmin = ljmina*1e-9
-	lengtha = self.glade_ui.get_widget("ljlen_sp").get_value()	
+	lengtha = self.glade_ui.get_widget("ljlen_sp").get_value()
 	length = mypypm7.mypmmoda.length = lengtha*1e-9
 	mtip = mypypm7.mypmmoda.mtip = self.glade_ui.get_widget("mmtip_sp").get_value()
 	msample = mypypm7.mypmmoda.msample = self.glade_ui.get_widget("mmsam_sp").get_value()
@@ -101,8 +101,8 @@ class dforce:
 	zcmaxa = self.glade_ui.get_widget("zcmax_sp").get_value()
 	zcmax=mypypm7.mypmmoda.zcmax = zcmaxa*1.e-9
 	if emuestra > 0 and epunta > 0:		# NEW
-		ebarra=1./(0.25/emuestra+0.25/epunta)		
-	else:	
+		ebarra=1./(0.25/emuestra+0.25/epunta)
+	else:
 		ebarra=0.
 	mypypm7.mypmmoda.ebarra=ebarra		# need epunta & ebarra
 	f0a=kc*a0/q 				# need C
@@ -144,7 +144,7 @@ class dforce:
 	print "llega2"
 	#========================Obtaining outputs time domain ==========================
 	# "t.s","z.nm","zp.deg"
-	tarray=mypypm7.mypmmoda.tarray	
+	tarray=mypypm7.mypmmoda.tarray
 	xarray=mypypm7.mypmmoda.xarray
 	varray=mypypm7.mypmmoda.varray
 	farray=mypypm7.mypmmoda.farray
@@ -166,7 +166,7 @@ class dforce:
 	tx2=tx2.T				#Array transpose
 	np.savetxt('zcdom.out', tx2)		# With the order 1 column (zc)
 	# DN ++++++
-	mypypm7.mypmmoda.killvecs() # release the fortran dynamic vectors (IN & OUT) it is not necessarily related     
+	mypypm7.mypmmoda.killvecs() # release the fortran dynamic vectors (IN & OUT) it is not necessarily related
 
     def on_plot_ex_clicked(self, widget):
 	timedom = np.genfromtxt('timedom.out')
@@ -175,7 +175,7 @@ class dforce:
 	zcaux = zcdom[:,0]
 	if self.glade_ui.get_widget("single_cb").get_active() and self.glade_ui.get_widget("pm_cb").get_active():
 		if self.glade_ui.get_widget("zt_cb").get_active():
-			figure(1)			
+			figure(1)
 			grid(True)
 			xarray = timedom[:,1]
 			#xarray=mypypm7.mypmmoda.xarray
@@ -184,7 +184,7 @@ class dforce:
 			#show()
 			savefig('fig1.png')
 			if self.glade_ui.get_widget("ft_cb").get_active():
-				figure(2)			
+				figure(2)
 				grid(True)
 				farray = timedom[:,3]
 				title('Force (nN) vs. Time (s)')
@@ -193,25 +193,25 @@ class dforce:
 				savefig('fig2.png')
 				if self.glade_ui.get_widget("ampst_cb").get_active():
 					figure(3)
-					grid(True)			
+					grid(True)
 					#amps=mypypm7.mypmmoda.amps
-					amps = zcdom[:,1]					
+					amps = zcdom[:,1]
 					title('Amplitude (nm) vs. Average distance (nm)')
 					plot(zcaux,amps,'r.--')
 					#show()
 					savefig('fig3.png')
 					if self.glade_ui.get_widget("fasest_cb").get_active():
 						figure(4)
-						grid(True)			
+						grid(True)
 						#fases=mypypm7.mypmmoda.fases
-						fases = zcdom[:,2]						
+						fases = zcdom[:,2]
 						title('Phase (deg) vs. Average distance (nm)')
 						plot(zcaux,fases,'g.--')
 						#show()
 						savefig('fig4.png')
 						if self.glade_ui.get_widget("mdef_cb").get_active():
 							figure(5)
-							grid(True)			
+							grid(True)
 							#defl=mypypm7.mypmmoda.defl
 							defl = zcdom[:,5]
 							title('Mean deflection (nm) vs. Average distance (nm)')
@@ -220,7 +220,7 @@ class dforce:
 						   	savefig('fig5.png')
 							if self.glade_ui.get_widget("mdis_cb").get_active():
 								figure(6)
-								grid(True)			
+								grid(True)
 								#dminimo=mypypm7.mypmmoda.dminimo
 								dminimo = zcdom[:,3]
 								title('Minimum distance (nm) vs. Average distance (nm)')
@@ -229,7 +229,7 @@ class dforce:
 							   	savefig('fig6.png')
 								if self.glade_ui.get_widget("maforce_cb").get_active():
 									figure(7)
-									grid(True)			
+									grid(True)
 									#fmediaux=mypypm7.mypmmoda.fmediaux
 									interaux = zcdom[:,4]
 									title('Maximum force (nm) vs. Average distance (nm)')
@@ -238,7 +238,7 @@ class dforce:
 								   	savefig('fig7.png')
 									if self.glade_ui.get_widget("etst_cb").get_active():
 										figure(8)
-										grid(True)			
+										grid(True)
 										#ets1=mypypm7.mypmmoda.ets1
 										ets1 = zcdom[:,7]
 										title('Total dissipated energy (J) vs. Average distance (nm)')
@@ -247,7 +247,7 @@ class dforce:
 									   	savefig('fig8.png')
 										if self.glade_ui.get_widget("virialt_cb").get_active():
 											figure(9)
-											grid(True)			
+											grid(True)
 											#virialaux=mypypm7.mypmmoda.virialaux
 											virialaux = zcdom[:,8]
 											title('Virial (J) S vs. Average distance (nm)')
