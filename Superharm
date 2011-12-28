@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+
+from superharm.superharm import dforce
+import gtk
+
+if __name__ == '__main__':
+    dforce()
+    gtk.main()
