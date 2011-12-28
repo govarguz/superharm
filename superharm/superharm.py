@@ -282,7 +282,3 @@ class dforce:
         print "Your simulation data and curves have been saved"
     def on_inputs_ex_clicked(self, widget):
         print "please upload the file in the following format:"
-
-if __name__ == '__main__':
-    dforce()
-    gtk.main()
