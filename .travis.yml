@@ -1,0 +1,5 @@
+language: cpp
+
+before_install:
+ - sudo apt-get update
+ - sudo apt-get install python-scipy python-matplotlib python-matplotlib-data
